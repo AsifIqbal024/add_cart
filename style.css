@@ -102,3 +102,13 @@ main {
     display: flex;
     justify-content: center;
 }
+.products {
+    display: flex;
+}
+.product {
+    background-color: rgb(233,196,106);
+    height: 150px;
+    width: 120px;
+    margin: 10px;
+    padding: 15px;
+}
