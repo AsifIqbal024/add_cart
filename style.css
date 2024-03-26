@@ -17,7 +17,7 @@ body {
     padding: 25px;
     background-color: rgb(42,157,143);
     height:100vh;
-    /* display: none; */
+    display: none;
     font-size: 20px;
 }
 .menubar.active {
@@ -28,7 +28,7 @@ body {
     padding: 25px;
     background-color: rgb(42,157,143);
     height:100vh;
-    /* display: none; */
+    display: none;
     font-size: 20px;
     text-align: center;
 }
@@ -40,8 +40,17 @@ body {
     height: max-content;
     margin: 25px 0;
     display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+}
+.header-top {
+    display: flex;
     justify-content: space-between;
     border-bottom: 1px solid;
+}
+.header-bottom {
+    display: flex;
+    justify-content: center;
 }
 .menubar ul li {
     list-style: none;

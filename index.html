@@ -19,48 +19,50 @@
             </ul>
         </div>
         <header class="header">
-            <button class="toggle-btn-menu" onclick="showMenu()">
-                <i class="fa-solid fa-bars"></i>
-                <span>Menu</span>
-            </button>
-            <div>
-                <h1>Kazi Asif Iqbal</h1>
+            <div class="header-top">
+                <button class="toggle-btn-menu" onclick="showMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Menu</span>
+                </button>
+                <div>
+                    <h1>Kazi Asif Iqbal</h1>
+                </div>
+                <button class="toggle-btn-cart" onclick="showCart()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                    <span class="cart-total-items">0</span>
+                </button>
             </div>
-            <button class="toggle-btn-cart" onclick="showCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Cart</span>
-                <span class="cart-total-items">0</span>
-            </button>
+            <div class="header-bottom">
+                <div class="products">
+                    <div>
+                        <p>Product 1</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div>
+                        <p>Product 2</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div>
+                        <p>Product 3</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div>
+                        <p>Product 4</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div>
+                        <p>Product 5</p>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
         </header>
         <div class="cart-page">
             <p id="my-cart">My Cart</p>
             <span>Your Cart Has 0 Items</span>
         </div>
     </div>
-    <main>
-        <div class="products">
-            <div>
-                <p>Product 1</p>
-                <button>Add to Cart</button>
-            </div>
-            <div>
-                <p>Product 2</p>
-                <button>Add to Cart</button>
-            </div>
-            <div>
-                <p>Product 3</p>
-                <button>Add to Cart</button>
-            </div>
-            <div>
-                <p>Product 4</p>
-                <button>Add to Cart</button>
-            </div>
-            <div>
-                <p>Product 5</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-    </main>
 
     <script src="./script.js"></script>
 </body>
