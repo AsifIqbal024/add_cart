@@ -106,9 +106,35 @@ main {
     display: flex;
 }
 .product {
-    background-color: rgb(233,196,106);
-    height: 150px;
+    background-color: rgb(244,162,97);
+    height: 220px;
     width: 120px;
     margin: 10px;
     padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-name {
+    color: black;
+    font-family:cursive;
+    font-size: large;
+    font-weight: 500;
+}
+.product-price {
+    color: black;
+    font-family:cursive;
+    font-size: large;
+    font-weight: 500;
+}
+.product button {
+    padding: 10px;
+    border-radius: 35px;
+    border: 1px solid;
+}
+.product-img {
+    width: 120px;
+    height: 150px;
+    border-radius: 25px;
 }
