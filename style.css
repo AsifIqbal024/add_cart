@@ -27,7 +27,7 @@ body {
     width: 25%;
     padding: 25px;
     background-color: rgb(42,157,143);
-    height:100vh;
+    min-height:100vh;
     display: none;
     font-size: 20px;
     text-align: center;
@@ -137,4 +137,13 @@ main {
     width: 120px;
     height: 150px;
     border-radius: 25px;
+    margin: auto;
+}
+
+.cartItems {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
 }
