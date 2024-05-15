@@ -12,31 +12,31 @@ let products = [
   {
     id: 0,
     title: "Product 1",
-    price: "$ 1 0 0",
+    price: 100,
     image: "./Media/Product 1.jpg",
   },
   {
     id: 1,
     title: "Product 2",
-    price: "$ 2 0 0",
+    price: 200,
     image: "./Media/Product 2.jpg",
   },
   {
     id: 2,
     title: "Product 3",
-    price: "$ 3 0 0",
+    price: 300,
     image: "./Media/Product 3.jpg",
   },
   {
     id: 3,
     title: "Product 4",
-    price: "$ 4 0 0",
+    price: 400,
     image: "./Media/Product 4.jpg",
   },
   {
     id: 4,
     title: "Product 5",
-    price: "$ 5 0 0",
+    price: 500,
     image: "./Media/Product 5.jpg",
   },
 ];
@@ -56,6 +56,8 @@ products.forEach(
 );
 
 let val = 0;
+
+let subTotal = document.querySelector('.totalPrice');
 let cartPage = document.querySelector(".cartItems");
 let cartProducts = [];
 function cartAdd(i) {
@@ -63,12 +65,20 @@ function cartAdd(i) {
     cartProducts.push(i);
 
     cartPage.innerHTML = "";
+    let totalPrice=0;
     cartProducts.forEach((item) => {
       let product = products[item];
+      totalPrice += product.price;
+      console.log(product.price)
       cartPage.innerHTML += `
     <img class="product-img img1" src="${product.image}" alt="Product1">
                         <p class="product-name name1">${product.title}</p>
                         <p class="product-price price1">${product.price}</p>
+                        <div class="productNumber">
+                    <button class="productRemove" onclick="productRemove()"> - </button>
+                <input class="productQuantity" type="number">
+                <button class="productAdd" onclick="productAdd()"> + </button>
+                </div>
     `;
     });
     val = val + 1;
@@ -76,6 +86,11 @@ function cartAdd(i) {
     document.querySelector(
       ".cartItemTotal"
     ).innerHTML = `<p>Your Cart Has ${val} Items</p>`;
+    document.querySelector(
+      ".totalPrice"
+    ).innerHTML = `<p>Your Total Amount is ${totalPrice}</p>`;
     document.querySelector(".cart-product-info").innerHTML = ``;
+
+    // subTotal.innerHTML = ` Subtotal: ${price}`;
   }
 }
