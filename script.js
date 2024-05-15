@@ -68,7 +68,7 @@ let products = [
     title: "Product 10",
     price: 1000,
     image: "./Media/Product 5.jpg",
-  }
+  },
 ];
 
 let productDiv = document.querySelector(".products");
@@ -87,7 +87,7 @@ products.forEach(
 
 let val = 0;
 
-let subTotal = document.querySelector('.totalPrice');
+let subTotal = document.querySelector(".totalPrice");
 let cartPage = document.querySelector(".cartItems");
 let cartProducts = [];
 function cartAdd(i) {
@@ -95,20 +95,15 @@ function cartAdd(i) {
     cartProducts.push(i);
 
     cartPage.innerHTML = "";
-    let totalPrice=0;
+    let totalPrice = 0;
     cartProducts.forEach((item) => {
       let product = products[item];
       totalPrice += product.price;
-      console.log(product.price)
+      console.log(product.price);
       cartPage.innerHTML += `
     <img class="product-img img1" src="${product.image}" alt="Product1">
                         <p class="product-name name1">${product.title}</p>
                         <p class="product-price price1">${product.price}</p>
-                        <div class="productNumber">
-                    <button class="productRemove" onclick="productRemove()"> - </button>
-                <input class="productQuantity" type="number" min="0" max="99">
-                <button class="productAdd" onclick="productAdd()"> + </button>
-                </div>
     `;
     });
     val = val + 1;
@@ -119,15 +114,21 @@ function cartAdd(i) {
     document.querySelector(
       ".totalPrice"
     ).innerHTML = `<p>Your Total Amount is ${totalPrice}</p>`;
-    // document.querySelector(".cart-product-info").innerHTML = ``;
   }
 }
 
-let productNumber = document.querySelector('.productQuantity');
-let i = 0;
-function productAdd() {
-    productNumber.value = ++i;
-}
-function productRemove() {
-    productNumber.value = --i;
+// Search Bar
+
+let productsTitle = [];
+products.forEach((item) => {
+  productsTitle.push(item.title);
+});
+
+productsTitle.forEach((item) => {
+  document.querySelector(".search").innerHTML += `<div class="searchSuggestions">${item}`;
+});
+
+
+document.querySelector('.searchInput').onkeyup = function() {
+  document.querySelector(".search").classList.toggle('hidden')
 }
