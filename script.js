@@ -39,6 +39,36 @@ let products = [
     price: 500,
     image: "./Media/Product 5.jpg",
   },
+  {
+    id: 5,
+    title: "Product 6",
+    price: 600,
+    image: "./Media/Product 1.jpg",
+  },
+  {
+    id: 6,
+    title: "Product 7",
+    price: 700,
+    image: "./Media/Product 2.jpg",
+  },
+  {
+    id: 7,
+    title: "Product 8",
+    price: 800,
+    image: "./Media/Product 3.jpg",
+  },
+  {
+    id: 8,
+    title: "Product 9",
+    price: 900,
+    image: "./Media/Product 4.jpg",
+  },
+  {
+    id: 9,
+    title: "Product 10",
+    price: 1000,
+    image: "./Media/Product 5.jpg",
+  }
 ];
 
 let productDiv = document.querySelector(".products");
@@ -49,7 +79,7 @@ products.forEach(
 <div class="product">
                         <img class="product-img img1" src="${item.image}" alt="Product1">
                         <p class="product-name name1">${item.title}</p>
-                        <p class="product-price price1">${item.price}</p>
+                        <p class="product-price price1">$ ${item.price}</p>
                         <button class="addToCart" onclick="cartAdd(${item.id})">Add to Cart</button>
                     </div>
                     `)
@@ -76,7 +106,7 @@ function cartAdd(i) {
                         <p class="product-price price1">${product.price}</p>
                         <div class="productNumber">
                     <button class="productRemove" onclick="productRemove()"> - </button>
-                <input class="productQuantity" type="number">
+                <input class="productQuantity" type="number" min="0" max="99">
                 <button class="productAdd" onclick="productAdd()"> + </button>
                 </div>
     `;
@@ -89,8 +119,15 @@ function cartAdd(i) {
     document.querySelector(
       ".totalPrice"
     ).innerHTML = `<p>Your Total Amount is ${totalPrice}</p>`;
-    document.querySelector(".cart-product-info").innerHTML = ``;
-
-    // subTotal.innerHTML = ` Subtotal: ${price}`;
+    // document.querySelector(".cart-product-info").innerHTML = ``;
   }
+}
+
+let productNumber = document.querySelector('.productQuantity');
+let i = 0;
+function productAdd() {
+    productNumber.value = ++i;
+}
+function productRemove() {
+    productNumber.value = --i;
 }
