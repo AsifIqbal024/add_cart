@@ -39,14 +39,20 @@
             </div>
             <div class="header-bottom">
                 <div class="products">
+                    
                 </div>
             </div>
         </header>
         <div class="cart-page">
             <p id="my-cart">My Cart</p>
-            <span class="cartItemTotal">Your Cart Is Empty</span>
+            <span class="cartItemTotal">Your Cart Is Empty</span><br>
+            <span class="totalPrice">Your Total Amount is 0</span>
             <div class="cartItems">
-
+                <div class="productNumber">
+                    <button class="productRemove" onclick="productRemove()"> - </button>
+                <input class="productQuantity" type="number">
+                <button class="productAdd" onclick="productAdd()"> + </button>
+                </div>
             </div>
         </div>
     </div>
