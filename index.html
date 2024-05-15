@@ -37,6 +37,10 @@
                     <span class="cart-total-items">0</span>
                 </button>
             </div>
+            <div class="searchBarDiv">
+                <input class="searchBar" placeholder="Search" type="text">
+                <button class="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
             <div class="header-bottom">
                 <div class="products">
                     
@@ -50,7 +54,7 @@
             <div class="cartItems">
                 <div class="productNumber">
                     <button class="productRemove" onclick="productRemove()"> - </button>
-                <input class="productQuantity" type="number">
+                <input class="productQuantity" type="number" min="0" max="99">
                 <button class="productAdd" onclick="productAdd()"> + </button>
                 </div>
             </div>
